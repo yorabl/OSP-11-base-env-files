@@ -1,0 +1,11 @@
+parameter_defaults:
+  NtpServer: 10.11.160.238
+  ControllerCount: 3
+  ComputeCount: 0
+  CephStorageCount: 3
+  OsdComputeCount: 3
+  
+  OvercloudControllerFlavor: control
+  OvercloudNetworkerFlavor: osp-compute
+  OvercloudComputeFlavor: compute
+  OvercloudCephStorageFlavor: ceph-storage

@@ -1,0 +1,2 @@
+resource_registry:
+  OS::TripleO::Services::CephRbdMirror: /usr/share/openstack-tripleo-heat-templates/puppet/services/pacemaker/ceph-rbdmirror.yaml
