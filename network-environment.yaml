@@ -3,28 +3,28 @@
 resource_registry:
   # Network Interface templates to use (these files must exist)
   OS::TripleO::BlockStorage::Net::SoftwareConfig:
-    /usr/share/openstack-tripleo-heat-templates/network/config/single-nic-vlans/cinder-storage.yaml
+    ../network/config/two-nic-vlans/cinder-storage.yaml
   OS::TripleO::Compute::Net::SoftwareConfig:
-    /usr/share/openstack-tripleo-heat-templates/network/config/single-nic-vlans/compute.yaml
+    ../network/config/two-nic-vlans/compute.yaml
   OS::TripleO::Controller::Net::SoftwareConfig:
-    /usr/share/openstack-tripleo-heat-templates/network/config/single-nic-vlans/controller.yaml
+    ../network/config/two-nic-vlans/controller.yaml
   OS::TripleO::ObjectStorage::Net::SoftwareConfig:
-    /usr/share/openstack-tripleo-heat-templates/network/config/single-nic-vlans/swift-storage.yaml
+    ../network/config/two-nic-vlans/swift-storage.yaml
   OS::TripleO::CephStorage::Net::SoftwareConfig:
-    /usr/share/openstack-tripleo-heat-templates/network/config/single-nic-vlans/ceph-storage.yaml
+    ../network/config/two-nic-vlans/ceph-storage.yaml
 
 parameter_defaults:
   # This section is where deployment-specific configuration is done
   # CIDR subnet mask length for provisioning network
   ControlPlaneSubnetCidr: '24'
   # Gateway router for the provisioning network (or Undercloud IP)
-  ControlPlaneDefaultRoute: 192.168.1.1
-  EC2MetadataIp: 192.168.1.1  # Generally the IP of the Undercloud
+  ControlPlaneDefaultRoute: 192.168.0.1
+  EC2MetadataIp: 192.168.0.1  # Generally the IP of the Undercloud
   # Customize the IP subnets to match the local environment
-  InternalApiNetCidr: 192.168.0.0/24
-  StorageNetCidr: 192.168.2.0/24
-  StorageMgmtNetCidr: 192.168.2.0/24
-  TenantNetCidr: 192.168.0.0/24
+  InternalApiNetCidr: 192.168.1.0/24
+  StorageNetCidr: 10.35.140.0/27
+  StorageMgmtNetCidr: 10.35.140.32/27
+  TenantNetCidr: 192.168.2.0/24
   ExternalNetCidr: 10.35.140.64/27
   # Customize the VLAN IDs to match the local environment
   InternalApiNetworkVlanID: 12
@@ -33,10 +33,10 @@ parameter_defaults:
   TenantNetworkVlanID: 13
   ExternalNetworkVlanID: 395
   # Customize the IP ranges on each network to use for static IPs and VIPs
-  InternalApiAllocationPools: [{'start': '192.168.0.10', 'end': '192.168.0.99'}]
-  StorageAllocationPools: [{'start': '192.168.2.10', 'end': '192.168.2.99'}]
-  StorageMgmtAllocationPools: [{'start': '192.168.2.100', 'end': '192.168.2.200'}]
-  TenantAllocationPools: [{'start': '192.168.0.100', 'end': '192.168.0.200'}]
+  InternalApiAllocationPools: [{'start': '192.168.1.10', 'end': '192.168.1.200'}]
+  StorageAllocationPools: [{'start': '10.35.140.10', 'end': '10.35.140.27'}]
+  StorageMgmtAllocationPools: [{'start': '10.35.140.34', 'end': '10.35.140.60'}]
+  TenantAllocationPools: [{'start': '192.168.2.10', 'end': '192.168.2.200'}]
   # Leave room if the external network is also used for floating IPs
   ExternalAllocationPools: [{'start': '10.35.140.66', 'end': '10.35.140.80'}]
   # Gateway router for the external network
@@ -50,7 +50,6 @@ parameter_defaults:
   DnsServers: ["8.8.8.8","10.35.28.28"]
   # Set to empty string to enable multiple external networks or VLANs
   NeutronExternalNetworkBridge: "''"
-  NeutronBridgeMappings: 'datacentre:br-ex,tenant:br-tenant'
   # List of Neutron network types for tenant networks (will be used in order)
   NeutronNetworkType: 'vxlan,vlan'
   # The tunnel type for the tenant network (vxlan or gre). Set to '' to disable tunneling.
