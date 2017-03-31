@@ -8,7 +8,6 @@ openstack overcloud deploy \
 -e OSP-11-base-env-files/puppet-pacemaker.yaml \
 -e OSP-11-base-env-files/ceph-radosgw.yaml \
 -e OSP-11-base-env-files/ceph-mds.yaml \
--e OSP-11-base-env-files/ceph-rbdmirror.yaml \
 --control-scale 3 \
 --compute-scale 4 \
 --ceph-storage-scale 4 \
