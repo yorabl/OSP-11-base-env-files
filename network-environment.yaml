@@ -3,15 +3,15 @@
 resource_registry:
   # Network Interface templates to use (these files must exist)
   OS::TripleO::BlockStorage::Net::SoftwareConfig:
-    /usr/share/openstack-tripleo-heat-templates/network/config/two-nic-vlans/cinder-storage.yaml
+    /usr/share/openstack-tripleo-heat-templates/network/config/single-nic-vlans/cinder-storage.yaml
   OS::TripleO::Compute::Net::SoftwareConfig:
-    /usr/share/openstack-tripleo-heat-templates/network/config/two-nic-vlans/compute.yaml
+    /usr/share/openstack-tripleo-heat-templates/network/config/single-nic-vlans/compute.yaml
   OS::TripleO::Controller::Net::SoftwareConfig:
-    /usr/share/openstack-tripleo-heat-templates/network/config/two-nic-vlans/controller.yaml
+    /usr/share/openstack-tripleo-heat-templates/network/config/single-nic-vlans/controller.yaml
   OS::TripleO::ObjectStorage::Net::SoftwareConfig:
-    /usr/share/openstack-tripleo-heat-templates/network/config/two-nic-vlans/swift-storage.yaml
+    /usr/share/openstack-tripleo-heat-templates/network/config/single-nic-vlans/swift-storage.yaml
   OS::TripleO::CephStorage::Net::SoftwareConfig:
-    /usr/share/openstack-tripleo-heat-templates/network/config/two-nic-vlans/ceph-storage.yaml
+    /usr/share/openstack-tripleo-heat-templates/network/config/single-nic-vlans/ceph-storage.yaml
 
 parameter_defaults:
   # This section is where deployment-specific configuration is done

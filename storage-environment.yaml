@@ -53,22 +53,22 @@ parameter_defaults:
        journal: 
      '/dev/vdc':
        journal:
-#     '/dev/vdd':
-#       journal: 
-#     '/dev/vde':
-#       journal:
-#     '/dev/vdf':
-#       journal:
-#     '/dev/vdg':
-#       journal:
-#     '/dev/vdh':
-#       journal:
-#     '/dev/vdi':
-#       journal:
-#     '/dev/vdj':
-#       journal:     
-#     '/dev/vdk':
-#       journal:
+     '/dev/vdd':
+       journal:
+     '/dev/vde':
+       journal:
+     '/dev/vdf':
+       journal:
+     '/dev/vdg':
+       journal:
+     '/dev/vdh':
+       journal:
+     '/dev/vdi':
+       journal:
+     '/dev/vdj':
+       journal:
+     '/dev/vdk':
+       journal:
 
     ceph::profile::params::osd_max_object_name_len: 256
     ceph::profile::params::osd_max_object_namespace_len: 64
