@@ -6,6 +6,10 @@ parameters:
     default: ''
     description: IP address/subnet on the ctlplane network
     type: string
+  ExternalIpSubnet:
+    default: ''
+    description: IP address/subnet on the external network
+    type: string
   InternalApiIpSubnet:
     default: ''
     description: IP address/subnet on the internal API network
@@ -48,6 +52,10 @@ parameters:
     type: string
   ControlPlaneDefaultRoute: # Override this via parameter_defaults
     description: The default route of the control plane network.
+    type: string
+  ExternalInterfaceDefaultRoute: # Not used by default in this template
+    default: 10.0.0.1
+    description: The default route of the external network.
     type: string
   ManagementInterfaceDefaultRoute: # Commented out by default in this template
     default: unset
