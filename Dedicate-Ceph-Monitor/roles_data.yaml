@@ -205,7 +205,6 @@
 
 - name: CephMonitor
   HostnameFormatDefault: '%stackname%-cephmonitor-%index%'
-  OvercloudNetworkerFlavor:
   ServicesDefault:
     - OS::TripleO::Services::CACerts
     - OS::TripleO::Services::CephMon
