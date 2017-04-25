@@ -2,7 +2,7 @@ parameter_defaults:
   #OvercloudControlFlavor: control
   #OvercloudComputeFlavor: compute
   #OvercloudCephStorageFlavor: ceph-storage
-  OvercloudOsdComputeFlavor: osdcompute
+  OvercloudOsdComputeFlavor: osd-compute
   #ControlCount: 3
   #ComputeCount: 0
   #CephStorageCount: 0
