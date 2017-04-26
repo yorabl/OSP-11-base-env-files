@@ -211,7 +211,6 @@
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::CACerts
     - OS::TripleO::Services::CephClient
-    - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
     - OS::TripleO::Services::Sshd
