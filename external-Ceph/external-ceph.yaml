@@ -1,0 +1,29 @@
+resource_registry:
+  OS::TripleO::Services::CephExternal: /usr/share/openstack-tripleo-heat-templates/puppet/services/ceph-external.yaml
+  OS::TripleO::Services::CephMon: OS::Heat::None
+  OS::TripleO::Services::CephClient: OS::Heat::None
+  OS::TripleO::Services::CephOSD: OS::Heat::None
+
+parameter_defaults:
+  # NOTE: These example parameters are required when using CephExternal
+  CephClusterFSID: 'cdf24729-bd06-46c2-ba47-7018ae220197'
+  CephClientKey: 'AQBBiblYl7p0GxAAaRgZ7OAdsNm47hIpLqMPiA=='
+  CephExternalMonHost: '10.35.64.81, 10.35.64.82, 10.35.64.83'
+
+  # the following parameters enable Ceph backends for Cinder, Glance, Gnocchi and Nova
+  NovaEnableRbdBackend: true
+  CinderEnableRbdBackend: true
+  CinderBackupBackend: ceph
+  GlanceBackend: rbd
+  GnocchiBackend: rbd
+  # If the Ceph pools which host VMs, Volumes and Images do not match these
+  # names OR the client keyring to use is not named 'openstack',  edit the
+  # following as needed.
+  NovaRbdPoolName: yrabl-vms
+  CinderRbdPoolName: yrabl-volumes
+  CinderBackupRbdPoolName: yrabl-backups
+  GlanceRbdPoolName: yrabl-images
+  GnocchiRbdPoolName: yrabl-metrics
+  CephClientUserName: yrabl
+  CinderEnableIscsiBackend: false
+  RbdDefaultFeatures: 1

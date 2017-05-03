@@ -1,0 +1,21 @@
+# An environment which enables configuration of an
+# Overcloud controller with Pacemaker.
+resource_registry:
+  OS::TripleO::Tasks::ControllerPrePuppet: /usr/share/openstack-tripleo-heat-templates/extraconfig/tasks/pre_puppet_pacemaker.yaml
+  OS::TripleO::Tasks::ControllerPostPuppet: /usr/share/openstack-tripleo-heat-templates/extraconfig/tasks/post_puppet_pacemaker.yaml
+  OS::TripleO::Tasks::ControllerPostPuppetRestart: /usr/share/openstack-tripleo-heat-templates/extraconfig/tasks/post_puppet_pacemaker_restart.yaml
+
+  # custom pacemaker services
+  # NOTE: Please before adding any pacemaker-managed services, get in touch
+  # with bandini, Ng or beekhof
+  OS::TripleO::Services::CinderVolume: /usr/share/openstack-tripleo-heat-templates/puppet/services/pacemaker/cinder-volume.yaml
+  OS::TripleO::Services::RabbitMQ: /usr/share/openstack-tripleo-heat-templates/puppet/services/pacemaker/rabbitmq.yaml
+  OS::TripleO::Services::HAproxy: /usr/share/openstack-tripleo-heat-templates/puppet/services/pacemaker/haproxy.yaml
+  OS::TripleO::Services::Pacemaker: /usr/share/openstack-tripleo-heat-templates/puppet/services/pacemaker.yaml
+  OS::TripleO::Services::PacemakerRemote: /usr/share/openstack-tripleo-heat-templates/puppet/services/pacemaker_remote.yaml
+  OS::TripleO::Services::Redis: /usr/share/openstack-tripleo-heat-templates/puppet/services/pacemaker/database/redis.yaml
+  OS::TripleO::Services::MySQL: /usr/share/openstack-tripleo-heat-templates/puppet/services/pacemaker/database/mysql.yaml
+  # Services that are disabled by default (use relevant environment files):
+
+  # Services that are disabled for HA deployments with pacemaker
+  OS::TripleO::Services::Keepalived: OS::Heat::None
