@@ -120,7 +120,7 @@
       "memory": "4096",
       "disk": "41"
     },
-    {1
+    {
       "pm_user": "stack",
       "arch": "x86_64",
       "name": "ceph-1",
