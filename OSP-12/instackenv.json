@@ -1,0 +1,249 @@
+{
+  "nodes": [
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6231",
+      "arch": "x86_64",
+      "name": "controller-1",
+      "pm_addr": "panther14.qa.lab.tlv.redhat.com",
+      "capabilities":"profile:control,boot_option:local",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "52:54:00:0b:09:09"
+      ],
+      "cpu": "4",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6232",
+      "arch": "x86_64",
+      "name": "controller-2",
+      "pm_addr": "panther14.qa.lab.tlv.redhat.com",
+      "capabilities":"profile:control,boot_option:local",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "52:54:00:46:25:02"
+      ],
+      "cpu": "4",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6233",
+      "arch": "x86_64",
+      "name": "controller-3",
+      "pm_addr": "panther14.qa.lab.tlv.redhat.com",
+      "capabilities":"profile:control,boot_option:local",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "52:54:00:73:a9:ff"
+      ],
+      "cpu": "2",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6234",
+      "arch": "x86_64",
+      "name": "compute-6",
+      "pm_addr": "panther14.qa.lab.tlv.redhat.com",
+      "capabilities":"profile:control,boot_option:local",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "52:54:00:fd:e7:58"
+      ],
+      "cpu": "2",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6235",
+      "arch": "x86_64",
+      "name": "compute-7",
+      "pm_addr": "panther14.qa.lab.tlv.redhat.com",
+      "capabilities":"profile:control,boot_option:local",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "52:54:00:49:73:47"
+      ],
+      "cpu": "2",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6231",
+      "arch": "x86_64",
+      "name": "compute-1",
+      "pm_addr": "panther15.qa.lab.tlv.redhat.com",
+      "pm_type": "pxe_ipmitool",
+      "capabilities":"profile:compute,boot_option:local",
+      "mac": [
+        "52:54:00:20:14:39"
+      ],
+      "cpu": "4",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6232",
+      "arch": "x86_64",
+      "name": "compute-2",
+      "pm_addr": "panther15.qa.lab.tlv.redhat.com",
+      "capabilities":"profile:compute,boot_option:local",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "52:54:00:fe:06:07"
+      ],
+      "cpu": "4",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6233",
+      "arch": "x86_64",
+      "name": "compute-3",
+      "pm_addr": "panther15.qa.lab.tlv.redhat.com",
+      "pm_type": "pxe_ipmitool",
+      "capabilities":"profile:compute,boot_option:local",
+      "mac": [
+        "52:54:00:8d:c2:67"
+      ],
+      "cpu": "4",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6234",
+      "arch": "x86_64",
+      "name": "compute-4",
+      "pm_addr": "panther15.qa.lab.tlv.redhat.com",
+      "pm_type": "pxe_ipmitool",
+      "capabilities":"profile:compute,boot_option:local",
+      "mac": [
+        "52:54:00:a0:16:d5"
+      ],
+      "cpu": "4",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6235",
+      "arch": "x86_64",
+      "name": "compute-5",
+      "pm_addr": "panther15.qa.lab.tlv.redhat.com",
+      "pm_type": "pxe_ipmitool",
+      "capabilities":"profile:compute,boot_option:local",
+      "mac": [
+        "52:54:00:08:3d:96"
+      ],
+      "cpu": "4",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6231",
+      "arch": "x86_64",
+      "name": "ceph-1",
+      "pm_addr": "panther16.qa.lab.tlv.redhat.com",
+      "capabilities":"profile:ceph-storage,boot_option:local",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "52:54:00:25:bf:61"
+      ],
+      "cpu": "2",
+      "memory": "4096",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6232",
+      "arch": "x86_64",
+      "name": "ceph-2",
+      "pm_addr": "panther16.qa.lab.tlv.redhat.com",
+      "pm_type": "pxe_ipmitool",
+      "capabilities":"profile:ceph-storage,boot_option:local",
+      "mac": [
+        "52:54:00:19:e6:31"
+      ],
+      "cpu": "4",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6233",
+      "arch": "x86_64",
+      "name": "ceph-3",
+      "pm_addr": "panther16.qa.lab.tlv.redhat.com",
+      "capabilities":"profile:ceph-storage,boot_option:local",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "52:54:00:69:4d:e5"
+      ],
+      "cpu": "4",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6234",
+      "arch": "x86_64",
+      "name": "ceph-4",
+      "pm_addr": "panther16.qa.lab.tlv.redhat.com",
+      "capabilities":"profile:ceph-storage,boot_option:local",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "52:54:00:c5:ea:6d"
+      ],
+      "cpu": "4",
+      "memory": "8192",
+      "disk": "41"
+    },
+    {
+      "pm_user": "stack",
+      "pm_password":"stack",
+      "pm_port": "6235",
+      "arch": "x86_64",
+      "name": "compute-8",
+      "pm_addr": "panther16.qa.lab.tlv.redhat.com",
+      "capabilities":"profile:compute,boot_option:local",
+      "pm_type": "pxe_ipmitool",
+      "mac": [
+        "52:54:00:6c:14:b7"
+      ],
+      "cpu": "4",
+      "memory": "8192",
+      "disk": "41"
+    }
+  ],
+  "arch": "x86_64",
+  "host-ip": "panther14.qa.lab.tlv.redhat.com",
+  "power_manager": "nova.virt.baremetal.virtual_power_driver.VirtualPowerManager",
+  "pm_password":"-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA5Ggv10FM+cHuJ2o64vCaIQ1GHwRoOKs4fdHsDVox1DSkUyie\nTulaCcLjeLq7vhJQEZBy1cX1/F2mDwM8d1g1hLPZEFg6yWsIPZ/u6QvvDK8T+gE2\nw2r/DOSRxim6czj0NkP8oh6Kks3kIO3wCC7UK1U544bTA2A51hdd832L8/q9sHbe\npAV6piXqjVmlJ6VWFHCWXFsXIvcA07Qnxs0EIVhWJThAuQuPjoFI0MWpGaOB7bmJ\nMCANn1KZnEhbahXxjxP4e9VwcAEVBZETww+gtNYq8qyK4qnmp9xtLGme4LwMdhAv\nqE/ROPnOeEwUFZFa9RmJ/4gqZcxpDQ6Vv1W81wIDAQABAoIBAGHEBtZIaT5uuBW+\n7r285vxGxkD4jfPTtjaE6Fk+xh1i+wNtW3XDhHqxJNTEeR/+jq81+TFvrr77Bt1e\nMT+UTjQjF0Jbwa39VmWqU4UFSqlPN2nHoz06SzmljJAZxGkVc9LWfwiVshLsdj1y\nG1AlW0PBEypEx4WmZpsxHVHf50vitKdiyAnvlHCzko5yCPn+hCTA0GC+IpjOTHAO\n9iILrtZ3l+Rrd5dq1iMAO/yWMxHwc59KaSp00F+zvlCZebuK/Z+K9oHQvagKepjM\nbyhhnxoVDUznKggc1xL5TflkMQqnRDKSXhryH+f4uy2dbeOoGs+RtBWpOCVqfeg2\nJTJq3yECgYEA/Ane1vmEen9ZO2tPbHzSxC3xm65T/ZmmTtQaXfYRhM5Si8Evc2it\nLhxzdTB9k/SsC4ewK5VJt/u84Fv/ArzAomVtzyUQWKviWQxxsm8QD1HPTsKYqw1W\nIK52smsTnHg4khmJYSSVCCmJ6O58CLznDgHXHfCDfXeACVskiQUXJmsCgYEA5/86\n12bUY8R1aSMX161F3YrmT4la6wpY7wwp2SNAJL053BhLkSqHXCwXZlz8RIZc2vfs\nTfkuWwAVgSRTnn/OfZvTvF5VQCHJgr31gstlBCgueOFMbZ66ZHmFjVHxkNHJiffc\n1u9XGrx+uZEI6+gkkLQ2hmuLB2Y5p1OyqS1NpkUCgYAIU3cmGOYUeeKDwP7FsbXw\nvyfNIcwqg4nn7r/UPM3FWl+FuGMN5/ZYoJ370BdF7P5F/zyFpA/kYQ+TRda9y2h9\ntOYUwr+wfjUjBfM3ls2sA+LaUjli5TTkLX9EU585Owt7YBaWu/OkamLg7Afy7fKg\nFtV5armdSnZTWMxzLlTecwKBgQDYhTd4g4sj1d4yksMU0q2K97C9eJc3GAAqknKY\nKjMaVtSiWrZkNIoCd1AbhBsZJUGSR6Lunuopmil3ztyP5/5i8sUpX+02npIAiKOT\nP5r2xz2gKb137ZVOYrBHVbwbigAL2R3uJ5Bm7pdjPz5RVeaSeu8Mg2BNNpYGWbI7\n/IEk9QKBgQCqpYlpmFrn5IiwOfVLuxo+Q/FunipKmv4pH/uOB4ApUavWjHmbsPoQ\nnKtnplBJh3yZxO1xWZkXSJKTWp+3otceTQ4TGyDtIwti6ZvezWGa+8RJefTXQDpr\n3I4rB8rzgZhYiTqs/foN0iFQ5oqCwhrRLgkZnLBIjE+B+fHAc+cnCQ==\n-----END RSA PRIVATE KEY-----",
+  "ssh-user": "stack"
+}
